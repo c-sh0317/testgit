@@ -1,0 +1,11 @@
+x = input("입력 파일 이름:")
+infile = open(x,"r")
+abc = {}
+for line in infile:
+    for ch in line:
+        if ch in abc:
+            abc[ch] += 1
+        else:
+            abc[ch] = 1
+print(abc)
+infile.close
